@@ -1,0 +1,378 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ripple Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f5f7;
+color:#1d1d1f;
+overflow-x:hidden;
+}
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+backdrop-filter:blur(20px);
+background:rgba(245,245,247,.85);
+border-bottom:1px solid rgba(0,0,0,.06);
+z-index:1000;
+}
+
+.logo{
+font-size:24px;
+font-weight:800;
+letter-spacing:-1px;
+}
+
+nav ul{
+display:flex;
+gap:35px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#1d1d1f;
+font-size:14px;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+opacity:.6;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:0 20px;
+}
+
+.hero h1{
+font-size:clamp(4rem,10vw,9rem);
+font-weight:900;
+letter-spacing:-4px;
+line-height:.9;
+margin-bottom:25px;
+}
+
+.hero p{
+font-size:1.5rem;
+max-width:750px;
+line-height:1.6;
+color:#6e6e73;
+margin-bottom:40px;
+}
+
+.cta{
+display:flex;
+gap:16px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.btn-primary{
+padding:16px 34px;
+background:#0071e3;
+color:white;
+border:none;
+border-radius:999px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.btn-primary:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 25px rgba(0,113,227,.25);
+}
+
+.btn-secondary{
+padding:16px 34px;
+background:white;
+border:1px solid #d2d2d7;
+border-radius:999px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.btn-secondary:hover{
+transform:translateY(-2px);
+}
+
+.hero-video{
+width:90%;
+max-width:1400px;
+height:650px;
+margin:40px auto 100px;
+border-radius:40px;
+overflow:hidden;
+background:linear-gradient(
+135deg,
+#ffffff,
+#e8f1ff,
+#f7f7f7
+);
+box-shadow:0 20px 80px rgba(0,0,0,.08);
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:30px;
+}
+
+.hero-video h2{
+font-size:5rem;
+font-weight:800;
+letter-spacing:-3px;
+background:linear-gradient(
+90deg,
+#0071e3,
+#6e45ff
+);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.section{
+padding:100px 8%;
+}
+
+.section-title{
+font-size:3rem;
+text-align:center;
+margin-bottom:50px;
+}
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+max-width:1200px;
+margin:auto;
+}
+
+.card{
+background:white;
+padding:40px;
+border-radius:30px;
+box-shadow:0 10px 30px rgba(0,0,0,.06);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+font-size:2rem;
+margin-bottom:15px;
+}
+
+.card p{
+color:#6e6e73;
+line-height:1.7;
+}
+
+.about{
+background:white;
+}
+
+.about p{
+max-width:800px;
+margin:auto;
+font-size:1.2rem;
+line-height:1.8;
+text-align:center;
+color:#6e6e73;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact p{
+font-size:1.2rem;
+color:#6e6e73;
+margin-bottom:20px;
+}
+
+.email-btn{
+display:inline-block;
+padding:18px 36px;
+background:#0071e3;
+color:white;
+text-decoration:none;
+border-radius:999px;
+font-weight:600;
+}
+
+footer{
+padding:60px 20px;
+text-align:center;
+color:#6e6e73;
+font-size:14px;
+}
+
+@media(max-width:768px){
+
+nav ul{
+gap:18px;
+}
+
+.hero p{
+font-size:1rem;
+}
+
+.hero-video{
+height:350px;
+}
+
+.hero-video h2{
+font-size:2.5rem;
+}
+
+.section-title{
+font-size:2.2rem;
+}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">Ripple Studio</div>
+
+<ul>
+<li><a href="#products">Products</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+
+<h1>
+Build.<br>
+Create.<br>
+Inspire.
+</h1>
+
+<p>
+Ripple Studio creates beautiful digital products,
+AI-powered experiences, and modern software that
+helps users accomplish their goals faster and easier.
+</p>
+
+<div class="cta">
+<button class="btn-primary">
+YouTube Channel
+</button>
+
+<button class="btn-secondary">
+View Projects
+</button>
+</div>
+
+</section>
+
+<div class="hero-video">
+<h2>
+Ripple Studio<br>
+</h2>
+</div>
+
+<section id="products" class="section">
+
+<h2 class="section-title">Products</h2>
+
+<div class="product-grid">
+
+<div class="card">
+<h3>BubbleOS</h3>
+<p>
+A modern operating system concept focused on simplicity,
+speed, and a beautiful user experience.
+Currently in beta
+</p>
+</div>
+
+<div class="card">
+<h3>Ripple AI</h3>
+<p>
+An intelligent AI assistant designed to help users
+create, learn, automate, and innovate.
+Currently in building stage
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="about" class="section about">
+
+<h2 class="section-title">About Ripple Studio</h2>
+
+<p>
+Ripple Studio is an independent software and creative studio
+founded by Anay Mathur. We build innovative digital products,
+AI-powered experiences, and modern technology that empowers
+people to create, learn, and achieve more.
+</p>
+
+</section>
+
+<section id="contact" class="section contact">
+
+<h2 class="section-title">Contact</h2>
+
+<p>
+Interested in working together?
+</p>
+
+<a class="email-btn"
+href="mailto:anaymathur.rocks15@gmail.com">
+anaymathur.rocks15@gmail.com
+</a>
+
+</section>
+
+<footer>
+© 2026 Ripple Studio. All rights reserved.
+</footer>
+
+</body>
+</html>
+```
