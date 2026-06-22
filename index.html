@@ -98,16 +98,22 @@ flex-wrap:wrap;
 justify-content:center;
 }
 
-.btn-primary{
+.btn-primary,
+.btn-secondary{
 padding:16px 34px;
-background:#0071e3;
-color:white;
-border:none;
 border-radius:999px;
 font-size:16px;
 font-weight:600;
 cursor:pointer;
 transition:.3s;
+text-decoration:none;
+display:inline-block;
+}
+
+.btn-primary{
+background:#0071e3;
+color:white;
+border:none;
 }
 
 .btn-primary:hover{
@@ -116,14 +122,9 @@ box-shadow:0 10px 25px rgba(0,113,227,.25);
 }
 
 .btn-secondary{
-padding:16px 34px;
 background:white;
 border:1px solid #d2d2d7;
-border-radius:999px;
-font-size:16px;
-font-weight:600;
-cursor:pointer;
-transition:.3s;
+color:#1d1d1f;
 }
 
 .btn-secondary:hover{
@@ -202,6 +203,17 @@ margin-bottom:15px;
 .card p{
 color:#6e6e73;
 line-height:1.7;
+margin-bottom:20px;
+}
+
+.product-btn{
+display:inline-block;
+padding:12px 24px;
+background:#0071e3;
+color:white;
+text-decoration:none;
+border-radius:999px;
+font-weight:600;
 }
 
 .about{
@@ -296,20 +308,15 @@ helps users accomplish their goals faster and easier.
 </p>
 
 <div class="cta">
-<button class="btn-primary">
-YouTube Channel
-</button>
-
-<button class="btn-secondary">
-View Projects
-</button>
+<a href="#" class="btn-primary">YouTube Channel</a>
+<a href="#products" class="btn-secondary">View Projects</a>
 </div>
 
 </section>
 
 <div class="hero-video">
 <h2>
-Ripple Studio<br>
+Ripple Studio
 </h2>
 </div>
 
@@ -324,7 +331,7 @@ Ripple Studio<br>
 <p>
 A modern operating system concept focused on simplicity,
 speed, and a beautiful user experience.
-Currently in beta
+Currently in beta.
 </p>
 </div>
 
@@ -333,8 +340,25 @@ Currently in beta
 <p>
 An intelligent AI assistant designed to help users
 create, learn, automate, and innovate.
-Currently in building stage
+Currently in building stage.
 </p>
+</div>
+
+<div class="card">
+<h3>RippleTube</h3>
+<p>
+A modern video-sharing platform built for creators,
+featuring a clean interface, fast performance,
+and an enjoyable viewing experience.
+</p>
+
+<a
+href="https://rippletube.lovable.app"
+target="_blank"
+class="product-btn">
+Visit RippleTube
+</a>
+
 </div>
 
 </div>
@@ -362,7 +386,8 @@ people to create, learn, and achieve more.
 Interested in working together?
 </p>
 
-<a class="email-btn"
+<a
+class="email-btn"
 href="mailto:anaymathur.rocks15@gmail.com">
 anaymathur.rocks15@gmail.com
 </a>
